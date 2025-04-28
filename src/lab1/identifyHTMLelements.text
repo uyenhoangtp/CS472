@@ -1,0 +1,27 @@
+Block elements:
+    <div>
+    <p>
+    <h1> to <h6>
+    <hr>
+    <br>
+    <section>
+    <header>
+    <footer>
+    <nav>
+    <aside>
+    <article>
+    <ol> and <li>
+    <ul> and <li>
+    <form>
+
+Inline elements:
+    <span>
+    <a>
+    <img>
+    <strong>
+    <i>
+    <input>
+    <textarea>
+    <button>
+    <select> and <option>
+    <label>
