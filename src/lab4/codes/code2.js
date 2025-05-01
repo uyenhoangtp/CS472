@@ -1,3 +1,5 @@
+'use strict';
+
 var x = 9;
 function myFunction() {
     return x * x;
