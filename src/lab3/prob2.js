@@ -9,4 +9,4 @@ let {name, years: age , isAdmin = false} = user;
 
 console.log(name); // John
 console.log(age); // 30
-console.log(isAdmin); // undefined
+console.log(isAdmin); // false
