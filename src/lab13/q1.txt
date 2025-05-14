@@ -1,0 +1,13 @@
+ES module - output:
+    promise 1
+    nextTick 1
+    setImmediate 1
+    setTimeout 1
+    <content from input.txt file>
+
+Commonjs - output:
+    nextTick 1
+    promise 1
+    setTimeout 1
+    setImmediate 1
+    <content from input.txt file>
