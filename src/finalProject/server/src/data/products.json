@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Apple iPhone 14",
+    "description": "Latest Apple smartphone with A15 Bionic chip.",
+    "category": "Smartphones",
+    "price": 799,
+    "dateAdded": "2025-04-01",
+    "averageRating": 4.67
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S23",
+    "description": "Flagship Android phone with amazing camera.",
+    "category": "Smartphones",
+    "price": 749,
+    "dateAdded": "2025-03-15",
+    "averageRating": 4.5
+  },
+  {
+    "id": 3,
+    "name": "Sony WH-1000XM5",
+    "description": "Industry-leading noise-canceling headphones.",
+    "category": "Audio",
+    "price": 349,
+    "dateAdded": "2025-03-20",
+    "averageRating": 5
+  },
+  {
+    "id": 4,
+    "name": "Apple MacBook Air M2",
+    "description": "Powerful, lightweight laptop with M2 chip.",
+    "category": "Laptops",
+    "price": 1099,
+    "dateAdded": "2025-02-10",
+    "averageRating": 5
+  },
+  {
+    "id": 5,
+    "name": "Dell XPS 13",
+    "description": "Compact Windows laptop with premium build.",
+    "category": "Laptops",
+    "price": 999,
+    "dateAdded": "2025-01-22",
+    "averageRating": 4.5
+  },
+  {
+    "id": 6,
+    "name": "Kindle Paperwhite",
+    "description": "Waterproof e-reader with high-resolution display.",
+    "category": "Electronics",
+    "price": 139,
+    "dateAdded": "2025-02-01",
+    "averageRating": 4
+  },
+  {
+    "id": 7,
+    "name": "Fitbit Charge 5",
+    "description": "Advanced fitness and health tracker.",
+    "category": "Wearables",
+    "price": 129,
+    "dateAdded": "2025-01-10",
+    "averageRating": 4.33
+  },
+  {
+    "id": 8,
+    "name": "Logitech MX Master 3",
+    "description": "High-performance wireless mouse for professionals.",
+    "category": "Accessories",
+    "price": 99,
+    "dateAdded": "2025-01-30",
+    "averageRating": 4.5
+  },
+  {
+    "id": 9,
+    "name": "Google Pixel 7",
+    "description": "Clean Android experience with top-tier camera.",
+    "category": "Smartphones",
+    "price": 599,
+    "dateAdded": "2025-02-18",
+    "averageRating": 4.5
+  },
+  {
+    "id": 10,
+    "name": "Anker PowerCore 10000",
+    "description": "Compact and lightweight portable charger.",
+    "category": "Accessories",
+    "price": 39,
+    "dateAdded": "2025-03-10",
+    "averageRating": 4.5
+  },
+  {
+    "id": 11,
+    "name": "HP Envy x360",
+    "description": "Convertible laptop for flexible productivity.",
+    "category": "Laptops",
+    "price": 849,
+    "dateAdded": "2025-03-05",
+    "averageRating": 4
+  },
+  {
+    "id": 12,
+    "name": "Nintendo Switch OLED",
+    "description": "Popular handheld gaming console with vibrant display.",
+    "category": "Gaming",
+    "price": 349,
+    "dateAdded": "2025-02-25",
+    "averageRating": 5
+  },
+  {
+    "id": 13,
+    "name": "JBL Flip 6",
+    "description": "Portable Bluetooth speaker with powerful sound.",
+    "category": "Audio",
+    "price": 129,
+    "dateAdded": "2025-01-05",
+    "averageRating": 4.5
+  },
+  {
+    "id": 14,
+    "name": "Canon EOS R50",
+    "description": "Compact mirrorless camera for content creators.",
+    "category": "Cameras",
+    "price": 679,
+    "dateAdded": "2025-03-18",
+    "averageRating": 4.5
+  },
+  {
+    "id": 15,
+    "name": "Amazon Echo Dot (5th Gen)",
+    "description": "Smart speaker with Alexa voice assistant.",
+    "category": "Smart Home",
+    "price": 49,
+    "dateAdded": "2025-01-25",
+    "averageRating": 4.5
+  }
+]
