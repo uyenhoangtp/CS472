@@ -1,6 +1,6 @@
 import type { Product } from '../types/types';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+export const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 /**
  * Fetch all products or search products by query.

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { useReviewContext } from '../contexts/ReviewContext';
-import { getProductById } from '../api/products';
+import { BASE_URL, getProductById } from '../api/products';
 import type { Product, Review } from '../types/types';
 
 const ReviewPage: React.FC = () => {
@@ -13,6 +13,9 @@ const ReviewPage: React.FC = () => {
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState('');
   const [editingReview, setEditingReview] = useState<Review | null>(null);
+  const [summary, setSummary] = useState<string | null>(null); // State for the summary
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+  const [isSummarizing, setIsSummarizing] = useState(false); // State for summarizing
 
   useEffect(() => {
     if (id) {
@@ -28,6 +31,37 @@ const ReviewPage: React.FC = () => {
     } catch (err) {
       console.error('Failed to fetch product details:', err);
     }
+  };
+
+  const handleSummarizeReviews = async () => {
+    if (!id) return;
+
+    setIsSummarizing(true);
+    setSummary(null);
+
+    try {
+      const response = await fetch(`${BASE_URL}/api/ai/review/summarize/${id}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to summarize reviews');
+      }
+
+      const data = await response.json();
+      setSummary(data.summary);
+      setIsModalOpen(true); // Open the modal to display the summary
+    } catch (err) {
+      console.error('Error summarizing reviews:', err);
+    } finally {
+      setIsSummarizing(false);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSummary(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -89,7 +123,16 @@ const ReviewPage: React.FC = () => {
         )}
 
         {/* Reviews Section */}
-        <h2 className="text-2xl font-bold mb-4">Product Reviews</h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-bold">Product Reviews</h2>
+          <button
+            onClick={handleSummarizeReviews}
+            className="bg-blue-600 text-white px-4 py-2 rounded"
+            disabled={isSummarizing}
+          >
+            {isSummarizing ? 'Summarizing...' : 'Summarize Reviews'}
+          </button>
+        </div>
         {loading && <p>Loading reviews...</p>}
         {error && <p className="text-red-500">{error}</p>}
 
@@ -158,6 +201,22 @@ const ReviewPage: React.FC = () => {
           )}
         </form>
       </div>
+
+      {/* Modal for Summary */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded shadow-lg w-1/2">
+            <h3 className="text-xl font-bold mb-4">Review Summary</h3>
+            <p>{summary}</p>
+            <button
+              onClick={handleCloseModal}
+              className="bg-blue-600 text-white px-4 py-2 rounded mt-4"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
